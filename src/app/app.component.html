@@ -12,20 +12,30 @@
           <input type="email"
             class="form-control"
             id="account"
+            name="account"
             pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b"
-            required>
+            [(ngModel)] = "account"
+            required
+          >
         </div>
         <div class="form-group">
           <label for="password">密碼</label>
           <input type="password"
             class="form-control"
             id="password"
+            name="password"
             minlength="8"
             maxlength="16"
-            required>
+            [(ngModel)] = "password"
+            required
+          >
         </div>
         <button class="btn btn-primary">Submit</button>
       </div>
     </div>
   </form>
+  <div class="mt-5">
+    <p>帳號：{{ account }}</p>
+    <p>密碼：{{ password }}</p>
+  </div>
 </div>
